@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* inizio classi/selettori che posso usare ovunque */
+
+.clearfix {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* tutta la terza generazione delle tre macroaree è indentata */
+
+.color {
+  width: 100%;
+}
+.indent {
+  width: 80%;
+  margin: auto;
+}
+
+.left, .right {
+  float: left;
+  width: 50%;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+
+/* left_of_2, left_of_3 */
+
+.horizontal_list > * {
+  display: inline;
+  list-style: none;
+}
+.horizontal_list > *:not(:last-child) {
+  margin-right: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  border: 1px solid;
+  border-radius: 0.3em;
+}
+.small {
+  padding: 0.5em;
+}
+.big {
+  padding: 1em;
+}
+.grey_back {
+  background-color: lightgrey;
+}
+.grey_back.red_text {
+  border-color: red;
+  color: red;
+}
+.grey_back.black_text {
+  border-color: white;
+  color: black;
+}
+.red_back {
+  background-color: red;
+  border-color: red;
+  color: white;
+}
+
+/* fine classi/selettori che posso usare ovunque */
+
+/* inizio header */
+
+/* vedere fontsize */
+
+.fixed {
+  /* perchè si vede lo sfondo anche senza clearfix? per la position? */
+  position: fixed;
+  line-height: 50px;
+  border-bottom: 1px solid grey;
+  background-color: lightgrey;
+}
+
+/* fine header */
+
+/* inizio main */
+
+/* fine main */
+
+/* inizio footer */
+
+/* fine footer */
