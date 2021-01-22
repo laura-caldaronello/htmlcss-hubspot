@@ -42,6 +42,11 @@ body {
 .horizontal_list > * {
   display: inline;
   list-style: none;
+  vertical-align: middle;
+}
+.horizontal_list > * > * {
+  font-size: 0.8em;
+  color: rgb(70 70 70);
 }
 .horizontal_list > *:not(:last-child) {
   margin-right: 1em;
@@ -56,7 +61,7 @@ a {
   border-radius: 0.3em;
 }
 .small {
-  padding: 0.5em;
+  padding: 0.3em;
 }
 .big {
   padding: 1em;
@@ -65,16 +70,16 @@ a {
   background-color: lightgrey;
 }
 .grey_back.red_text {
-  border-color: red;
-  color: red;
+  border-color: rgb(254 119 90);
+  color: rgb(254 119 90);
 }
 .grey_back.black_text {
   border-color: white;
   color: black;
 }
 .red_back {
-  background-color: red;
-  border-color: red;
+  background-color: rgb(254 119 90);
+  border-color: rgb(254 119 90);
   color: white;
 }
 
@@ -90,6 +95,18 @@ a {
   line-height: 50px;
   border-bottom: 1px solid grey;
   background-color: lightgrey;
+}
+.fixed .left .special {
+  filter: grayscale(100%) contrast(300%); /* lo so ho barato */
+
+  }
+.fixed .right .special {
+  display: inline-block;
+  line-height: 100%;
+  transform: rotate(315deg);
+  color: rgb(0 165 190);
+  font-size: 1em;
+  font-weight: bolder;
 }
 
 /* fine header */
