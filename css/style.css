@@ -26,18 +26,25 @@ body {
   margin: auto;
 }
 
-.left, .right {
+.left_of_2,
+.right_of_2 {
   float: left;
-  width: 50%;
+  width: 50%; /* da rivedere causa responsiveness */
 }
-.left {
+.left_of_2 {
   text-align: left;
 }
-.right {
+.right_of_2 {
   text-align: right;
 }
 
-/* left_of_2, left_of_3 */
+.left_of_3,
+.center_of_3,
+.right_of_3 {
+  float: left;
+  width: calc(100% / 3);
+  text-align: center;
+}
 
 .horizontal_list > * {
   display: inline;
@@ -45,11 +52,22 @@ body {
   vertical-align: middle;
 }
 .horizontal_list > * > * {
-  font-size: 0.8em;
+  font-size: 0.75em;
+  font-weight: bold;
   color: rgb(70 70 70);
 }
 .horizontal_list > *:not(:last-child) {
   margin-right: 1em;
+}
+
+.logo {
+  height: 20px;
+  vertical-align: middle;
+}
+
+header select {
+  border: none;
+  background-color: transparent;
 }
 
 a {
@@ -88,27 +106,48 @@ a {
 
 /* vedere fontsize */
 
-.fixed {
+header .fixed {
   /* perchè si vede lo sfondo anche senza clearfix? per la position? */
   position: fixed;
+  top: 0;
   line-height: 50px;
   border-bottom: 1px solid grey;
   background-color: rgb(244 249 253);
 }
-.fixed .left span {
+header .fixed .left_of_2 span {
   filter: grayscale(100%) contrast(500%); /* lo so ho barato */
-  }
-  .fixed .left select {
-    border: none;
-    background-color: transparent;
-  }
-.fixed .right .special {
+}
+header .fixed .right_of_2 .special {
   display: inline-block;
   line-height: 100%;
   transform: rotate(315deg);
   color: rgb(0 165 190);
   font-size: 1em;
   font-weight: bolder;
+}
+
+header nav:nth-child(2) {
+  margin-top: 50px;
+  line-height: 50px;
+}
+
+header .jumbotron {
+  background-image: url(../img/jumbotron.png);
+  padding-top: 50px;
+}
+header .jumbotron > * > *:not(:first-child) {
+  max-width: 50%;
+  margin-top: 20px;
+}
+header .jumbotron > * > a {
+  display: inline-block; /* generalizzare? */
+}
+
+header .stripe {
+  height: 50px;
+  background-color: rgb(175 235 228);
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 /* fine header */
