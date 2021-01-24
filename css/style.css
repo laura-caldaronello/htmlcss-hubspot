@@ -57,21 +57,37 @@ body {
   background-color: blue;
 }
 
+.horizontal_list {
+  list-style: none;
+}
 .horizontal_list > * {
   display: inline;
-  list-style: none;
   vertical-align: middle;
 }
 .horizontal_list > * > *,
 .horizontal_list > * > * > *,
 p {
   font-size: 0.75em;
-  line-height: 1.5em;
   font-weight: bold;
   color: rgb(70 70 70);
+  line-height: 1.5em;
 }
 .horizontal_list > *:not(:last-child) {
   margin-right: 1em;
+}
+.horizontal_list.check li::before {
+  content: '\2714';
+  display: inline-block;
+  margin-right: 0.75em;
+  font-size: 0.5em;
+  height: 1.6em;
+  width: 1.6em;
+  background-color: rgb(254 119 90);
+  color: white;
+  border-radius: 0.8em;
+  line-height: 1.6em;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .logo {
@@ -96,15 +112,13 @@ a {
 .typic h2 {
   font-weight: 900;
 }
-.typic > a {
-  display: inline-block;
-}
 .typic > p:last-child,
 main section:nth-child(2) .grid_element {
   font-size: 0.6em;
 }
 
 .button {
+  display: inline-block;
   border: 1px solid;
   border-radius: 0.3em;
   font-size: 0.75em;
@@ -131,6 +145,11 @@ main section:nth-child(2) .grid_element {
   color: white;
 }
 
+.white_box {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px lightgrey;
+}
 /* fine classi/selettori che posso usare ovunque */
 
 /* inizio header */
@@ -184,18 +203,51 @@ header .jumbotron .stripe {
 
 main section:nth-child(1).color {
   margin: 0;
-  background-color: yellow;
+  background-color: rgb(244 249 253);
 }
 main section:nth-child(1) .indent {
-  min-height: 400px;
   margin: 30px auto;
-  background-color: lightblue;
-  border: 1px solid black;
 }
 main section:nth-child(1) .indent > * {
-  min-height: 500px;
-  background-color: blue;
-  border: 1px solid black;
+  text-align: center;
+}
+main section:nth-child(1) .indent img {
+  height: 75px;
+}
+main section:nth-child(1) .indent:nth-child(1) .img_container {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  background-image: url(../img/integrations_illustration_2.svg);
+  background-size: 250%;
+  background-position: center;
+}
+main section:nth-child(1) .indent:nth-child(1) p {
+  width: 70%;
+  margin: 20px auto 0;
+}
+main section:nth-child(1) .indent:nth-child(2) {
+  padding: 30px 40px;
+}
+main section:nth-child(1) .indent:nth-child(2) .left_of_2 {
+  width: 30%;
+}
+main section:nth-child(1) .indent:nth-child(2) .left_of_2 > * {
+  margin-bottom: 10px;
+}
+main section:nth-child(1) .indent:nth-child(2) .right_of_2 {
+  width: 70%;
+  text-align: left;
+}
+main section:nth-child(1) .indent:nth-child(2) .right_of_2 > * {
+  margin-bottom: 10px;
+}
+main section:nth-child(1) .indent:nth-child(2) .right_of_2 > .clearfix > .right_of_2 {
+  height: 1em;
+  padding: 0.5em 0;
+}
+main section:nth-child(1) .indent:nth-child(2) .right_of_2 hr {
+  border: 1px solid rgb(70 70 70);
 }
 
 main section:nth-child(2).color {
