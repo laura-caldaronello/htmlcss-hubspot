@@ -25,24 +25,17 @@ body {
   width: 80%;
   margin: auto;
 }
-.indent2 {
-  width: 70%;
-  margin: auto;
-}
 
 .left_of_2,
 .right_of_2 {
   float: left;
-  /* width: 50%; /* da rivedere causa responsiveness */ */
 }
 .left_of_2 {
-  width: 30%;
-  /* max-width: 50%; */
+  width: 40%;
   text-align: left;
 }
 .right_of_2 {
-  width: 70%;
-  /* max-width: 90%; */
+  width: 60%;
   text-align: right;
 }
 
@@ -210,26 +203,32 @@ main section:nth-child(3).color {
   background-color: yellow;
   border-top: 1px solid black;
 }
-main section:nth-child(3) .indent,
-.indent2 {
+main section:nth-child(3) .indent {
   min-height: 200px;
   margin: 30px auto;
   background-color: lightblue;
   border: 1px solid black;
 }
-main section:nth-child(3) .indent > *,
-.indent2 > * {
+main section:nth-child(3) .indent > *{
   min-height: 200px;
   background-color: blue;
   border: 1px solid black;
 }
-main section:nth-child(3) .indent > * {
+main section:nth-child(3) .indent:last-child > * {
   width: 50%;
 }
-main section:nth-child(3) .indent2 .grid_element {
-  min-height: 100px;
+main section:nth-child(3) .indent .grid_container {
+  width: 90%;
+  margin: 0 auto;
   background-color: blue;
+}
+main section:nth-child(3) .indent .grid_element {
+  min-height: 100px;
+  background-color: red;
   border: 1px solid black;
+}
+main section:nth-child(3) .indent .left_of_2:not(.typic) {
+  padding: 0 40px;
 }
 
 /* fine main */
