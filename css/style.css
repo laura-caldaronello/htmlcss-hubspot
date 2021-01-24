@@ -57,7 +57,8 @@ body {
   background-color: blue;
 }
 
-.horizontal_list {
+.horizontal_list,
+.check {
   list-style: none;
 }
 .horizontal_list > * {
@@ -66,28 +67,35 @@ body {
 }
 .horizontal_list > * > *,
 .horizontal_list > * > * > *,
+.check,
 p {
-  font-size: 0.75em;
+  font-size: 12px;
   font-weight: bold;
   color: rgb(70 70 70);
-  line-height: 1.5em;
+  line-height: 18px;
+  vertical-align: middle;
 }
 .horizontal_list > *:not(:last-child) {
   margin-right: 1em;
 }
-.horizontal_list.check li::before {
+.check {
+  text-align: left;
+}
+.check:not(.horizontal_list) {
+  margin: 20px auto 30px;
+}
+.check li::before {
   content: '\2714';
   display: inline-block;
-  margin-right: 0.75em;
-  font-size: 0.5em;
-  height: 1.6em;
-  width: 1.6em;
+  margin-right: 10px;
+  font-size: 9px;
+  height: 12px;
+  width: 12px;
   background-color: rgb(254 119 90);
   color: white;
-  border-radius: 0.8em;
-  line-height: 1.6em;
+  border-radius: 6px;
+  line-height: 14px;
   text-align: center;
-  vertical-align: middle;
 }
 
 .logo {
@@ -114,14 +122,14 @@ a {
 }
 .typic > p:last-child,
 main section:nth-child(2) .grid_element {
-  font-size: 0.6em;
+  font-size: 10px;
 }
 
 .button {
   display: inline-block;
   border: 1px solid;
   border-radius: 0.3em;
-  font-size: 0.75em;
+  font-size: 12px;
 }
 .small {
   padding: 0.3em;
@@ -149,7 +157,30 @@ main section:nth-child(2) .grid_element {
   background-color: white;
   border-radius: 5px;
   box-shadow: 0px 0px 5px lightgrey;
+  padding: 10px 30px;
 }
+.white_box img,
+.white_box h3 {
+  margin-bottom: 10px;
+}
+.white_box > p {
+  height: 10em;
+}
+.white_box hr {
+  border: 1px solid rgb(70 70 70);
+}
+.white_box hr:not(.special) {
+  margin: 0 auto 30px;
+}
+.white_box h4::before {
+  content: 'popolar features';
+  text-transform: uppercase;
+}
+.white_box .button::before {
+  content: 'learn more';
+  text-transform: capitalize;
+}
+
 /* fine classi/selettori che posso usare ovunque */
 
 /* inizio header */
@@ -171,7 +202,7 @@ header .fixed .right_of_2 .special {
   line-height: 100%;
   transform: rotate(315deg);
   color: rgb(0 165 190);
-  font-size: 1em;
+  font-size: 12px;
   font-weight: bolder;
 }
 
@@ -250,6 +281,8 @@ main section:nth-child(1) .indent:nth-child(2) .right_of_2 hr {
   border: 1px solid rgb(70 70 70);
 }
 
+/* separazione sezioni */
+
 main section:nth-child(2).color {
   margin: 0;
   background-color: yellow;
@@ -266,6 +299,8 @@ main section:nth-child(2) .indent > * {
   background-color: blue;
   border: 1px solid black;
 }
+
+/* separazione sezioni */
 
 main section:nth-child(3).color {
   margin: 0;
