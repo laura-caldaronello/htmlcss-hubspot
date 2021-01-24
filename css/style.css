@@ -62,8 +62,11 @@ body {
   list-style: none;
   vertical-align: middle;
 }
-.horizontal_list > * > * {
+.horizontal_list > * > *,
+.horizontal_list > * > * > *,
+p {
   font-size: 0.75em;
+  line-height: 1.5em;
   font-weight: bold;
   color: rgb(70 70 70);
 }
@@ -85,17 +88,26 @@ a {
   text-decoration: none;
 }
 
-.typic > a {
-  display: inline-block;
-}
 .typic > * {
   max-width: 30vw;
   margin-top: 20px;
+}
+.typic h1,
+.typic h2 {
+  font-weight: 900;
+}
+.typic > a {
+  display: inline-block;
+}
+.typic > p:last-child,
+main section:nth-child(2) .grid_element {
+  font-size: 0.6em;
 }
 
 .button {
   border: 1px solid;
   border-radius: 0.3em;
+  font-size: 0.75em;
 }
 .small {
   padding: 0.3em;
@@ -126,7 +138,6 @@ a {
 /* vedere fontsize */
 
 header .fixed {
-  /* perchè si vede lo sfondo anche senza clearfix? per la position? */
   position: fixed;
   top: 0;
   line-height: 50px;
@@ -152,10 +163,16 @@ header nav:nth-child(2) {
 
 header .jumbotron {
   background-image: url(../img/jumbotron.png);
+  background-size: contain;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-color: rgb(255 244 239);
 }
-
-header .stripe {
-  height: 50px;
+header .jumbotron .typic {
+  margin: 40px auto 150px;
+}
+header .jumbotron .stripe {
+  height: 60px;
   background-color: rgb(175 235 228);
   border-top: 2px solid black;
   border-bottom: 2px solid black;
