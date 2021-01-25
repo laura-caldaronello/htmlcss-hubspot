@@ -16,8 +16,6 @@ body {
   clear: both;
 }
 
-/* tutta la terza generazione delle tre macroaree è indentata */
-
 .color {
   width: 100%;
 }
@@ -54,15 +52,6 @@ body {
   float: left;
   width: 25%;
   text-align: center;
-}
-.grid_element .icon {
-  height: 25px;
-}
-.grid_element img:not(.icon) {
-  width: 8vw;   /* anche se non mi sembra molto elegante */
-  height: 50px;
-  object-fit: contain;
-  vertical-align: middle;
 }
 
 ul {
@@ -129,7 +118,7 @@ h2 {
   margin-top: 20px;
 }
 .typic > p:last-child,
-main section:nth-child(2) .grid_element {
+main .achievements .grid_element {
   font-size: 10px;
 }
 
@@ -139,23 +128,23 @@ main section:nth-child(2) .grid_element {
   border-radius: 0.3em;
   font-size: 12px;
 }
-.small {
+.button.small {
   padding: 0.3em 0.5em;
 }
-.big {
+.button.big {
   padding: 1em;
 }
-.grey_back {
+.button.grey_back {
   background-color: lightgrey;
   border-color: white;
   color: black;
 }
-.white_back {
+.button.white_back {
   background-color: rgb(250 252 254);
   border-color: rgb(254 119 90);
   color: rgb(254 119 90);
 }
-.red_back {
+.button.red_back {
   background-color: rgb(254 119 90);
   border-color: rgb(254 119 90);
   color: white;
@@ -201,23 +190,13 @@ header .fixed {
   background-color: rgb(244 249 253);
   z-index: 1;
 }
-header .fixed .left_of_2 span {
-  filter: grayscale(100%) contrast(500%); /* lo so ho barato */
-}
 header .fixed .right_of_2 .special {
-  display: inline-block;
-  line-height: 100%;
-  transform: rotate(315deg);
   color: rgb(0 165 190);
-  font-size: 16px;
-  font-weight: bolder;
 }
-
 header nav:nth-child(2) {
   margin-top: 50px;
   line-height: 50px;
 }
-
 header .jumbotron {
   background-image: url(../img/jumbotron.png);
   background-size: contain;
@@ -239,20 +218,20 @@ header .jumbotron .stripe {
 
 /* inizio main */
 
-main section:nth-child(1).color {
+main .hubs.color {
   margin: 0;
   background-color: rgb(244 249 253);
 }
-main section:nth-child(1) .indent {
+main .hubs .indent {
   margin: 30px auto;
 }
-main section:nth-child(1) .indent > * {
+main .hubs .indent > * {
   text-align: center;
 }
-main section:nth-child(1) .indent img {
+main .hubs .indent img {
   height: 75px;
 }
-main section:nth-child(1) .indent:nth-child(1) .img_container {
+main .hubs .cubes .img_container {
   width: 150px;
   height: 150px;
   margin: auto;
@@ -260,64 +239,67 @@ main section:nth-child(1) .indent:nth-child(1) .img_container {
   background-size: 250%;
   background-position: center;
 }
-main section:nth-child(1) .indent:nth-child(1) p {
+main .hubs .cubes p {
   width: 70%;
   margin: 20px auto 0;
 }
-main section:nth-child(1) .indent:nth-child(2) {
+main .hubs .horizontal {
   padding: 30px 40px;
 }
-main section:nth-child(1) .indent:nth-child(2) .left_of_2 {
+main .hubs .horizontal .left_of_2 {
   width: 30%;
 }
-main section:nth-child(1) .indent:nth-child(2) .left_of_2 > * {
+main .hubs .horizontal .left_of_2 > * {
   margin-bottom: 10px;
 }
-main section:nth-child(1) .indent:nth-child(2) .right_of_2 {
+main .hubs .horizontal .right_of_2 {
   width: 70%;
   text-align: left;
 }
-main section:nth-child(1) .indent:nth-child(2) .right_of_2 > * {
+main .hubs .horizontal .right_of_2 > * {
   margin-bottom: 10px;
 }
-main section:nth-child(1) .indent:nth-child(2) .right_of_2 > .clearfix > .right_of_2 {
+main .hubs .horizontal .right_of_2 > .clearfix > .right_of_2 {
   height: 1em;
   padding: 0.5em 0;
 }
-main section:nth-child(1) .indent:nth-child(2) .right_of_2 hr {
+main .hubs .horizontal .right_of_2 hr {
   border: 1px solid rgb(70 70 70);
 }
 
 /* separazione sezioni */
 
-main section:nth-child(2).color {
+main .achievements.color {
   margin: 0;
   background: linear-gradient(90deg,rgb(0 170 184),rgb(0 187 168));
 }
-main section:nth-child(2) .indent {
+main .achievements .indent {
   margin: 30px auto;
 }
-main section:nth-child(2) .indent > * {
+main .achievements .indent > * {
   text-align: center;
   color: white;
 }
-main section:nth-child(2) .indent > p {
+main .achievements .indent > p {
   margin-top: 20px;
   font-weight: 500;
 }
-main section:nth-child(2) .grid_element:not(:nth-last-child(-n+4)) {
+main .achievements .grid_element:not(:nth-last-child(-n+4)) {
   border-bottom: 1px solid white;
 }
-main section:nth-child(2) .grid_element:not(:nth-child(4n+0)) {
+main .achievements .grid_element:not(:nth-child(4n+0)) {
   border-right: 1px solid white;
 }
-main section:nth-child(2) .grid_element > * {
+main .achievements .grid_element > * {
   margin: 10px 0;
 }
-main section:nth-child(2) .grid_element h1 {
+main .achievements .grid_element .icon {
+  height: 25px;
+}
+main .achievements .grid_element h1 {
   font-size: 3em;
 }
-main section:nth-child(2) .grid_element p {
+main .achievements .grid_element p {
   font-size: 1em;
   font-weight: 400;
   color: white;
@@ -325,35 +307,47 @@ main section:nth-child(2) .grid_element p {
 
 /* separazione sezioni */
 
-main section:nth-child(3).color {
+main .partners.color {
   margin: 0;
 }
-main section:nth-child(3) .indent {
+main .partners .indent {
   position: relative;
   margin: 50px auto 30px;
 }
-main section:nth-child(3) .indent:last-child > * {
+main .partners .indent:last-child > * {
   width: 50%;
 }
-main section:nth-child(3) .indent .grid_container {
-  width: 80%;
-  margin: 0 auto;
-}
-main section:nth-child(3) .indent .left_of_2:not(.typic) {
-  padding: 0 100px;
-  text-align: center;
-}
-main section:nth-child(3) .indent .left_of_2:not(.typic) h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-main section:nth-child(3) .indent .typic + .right_of_2 {
+main .partners .indent > .right_of_2 {
   position: absolute;
   top: 50%;
   right: 0;
   transform: translate(0,-50%);
 }
-main section:nth-child(3) .indent .typic + .right_of_2 img {
+main .partners .indent .grid_container {
+  width: 80%;
+  margin: 0 auto;
+}
+main .partners .indent .grid_element img {
+  width: 8vw;   /* anche se non mi sembra molto elegante */
+  height: 50px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+main .partners .indent .left_of_2:not(.typic) {
+  padding: 0 100px;
+  text-align: center;
+}
+main .partners .indent .left_of_2:not(.typic) h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+main .partners .indent .typic + .right_of_2 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0,-50%);
+}
+main .partners .indent .typic + .right_of_2 img {
   height: 250px;
 }
 
@@ -363,10 +357,16 @@ main section:nth-child(3) .indent .typic + .right_of_2 img {
 
 footer .color {
   background-color: rgb(50 73 91);
+  color: rgb(203 214 226);
+}
+footer h4 {
   color: white;
 }
-footer p {
-  color: white;
+footer p,
+footer a,
+footer .horizontal_list a {
+  font-weight: 400;
+  color: rgb(203 214 226);
 }
 footer .indent {
   margin: 30px auto;
@@ -388,7 +388,7 @@ footer ul {
   font-weight: 400;
   line-height: 2.5em;
 }
-footer .button {
+footer .button.special {
   line-height: 18px;
   margin: 10px 0;
   color: rgb(50 73 91);
@@ -397,13 +397,13 @@ footer h4 {
   font-weight: 600;
   line-height: 3.5em;
 }
-footer .fab:not(:last-child) {
+footer .fab {
   margin-right: 20px;
 }
 footer .languages {
   margin-top: 30px;
   line-height: 18px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgb(203 214 226);
   text-align: center;
 }
 
