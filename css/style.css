@@ -191,8 +191,9 @@ header .fixed {
   background-color: rgb(244 249 253);
   z-index: 1;
 }
-header .fixed .right_of_2 .special {
+header .fixed .right_of_2 i {
   color: rgb(0 165 190);
+  font-weight: bolder;
 }
 header select {
   border: none;
