@@ -136,11 +136,6 @@ main .achievements .grid_element {
 .button.big {
   padding: 1em;
 }
-.button.grey_back {
-  background-color: lightgrey;
-  border-color: white;
-  color: black;
-}
 .button.white_back {
   background-color: rgb(250 252 254);
   border-color: rgb(254 119 90);
@@ -378,6 +373,9 @@ footer ul {
 footer .button.special {
   line-height: 18px;
   margin: 10px 0;
+  background-color: rgb(203 214 226);
+  border-color: white;
+  color: rgb(50 73 91);
 }
 footer p,
 footer a,
