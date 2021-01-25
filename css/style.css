@@ -75,7 +75,7 @@ p {
   font-size: 12px;
   font-weight: bold;
   line-height: 18px;
-  color: rgb(70 70 70);
+  color: rgb(50 73 91);
   vertical-align: middle;
 }
 .horizontal_list > *:not(:last-child) {
@@ -166,7 +166,7 @@ main .achievements .grid_element {
   height: 10em;
 }
 .white_box hr {
-  border: 1px solid rgb(70 70 70);
+  border: 1px solid rgb(50 73 91);
 }
 .white_box hr:not(.special) {
   margin: 0 auto 30px;
@@ -272,7 +272,7 @@ main .hubs .horizontal .right_of_2 > .clearfix > .right_of_2 {
   padding: 0.5em 0;
 }
 main .hubs .horizontal .right_of_2 hr {
-  border: 1px solid rgb(70 70 70);
+  border: 1px solid rgb(50 73 91);
 }
 
 /* separazione sezioni */
