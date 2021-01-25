@@ -16,6 +16,13 @@ body {
   clear: both;
 }
 
+.verticalign {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0,-50%);
+}
+
 .color {
   width: 100%;
 }
@@ -96,11 +103,6 @@ p {
 .logo {
   height: 20px;
   vertical-align: middle;
-}
-
-header select {
-  border: none;
-  background-color: transparent;
 }
 
 a {
@@ -191,6 +193,10 @@ header .fixed {
 }
 header .fixed .right_of_2 .special {
   color: rgb(0 165 190);
+}
+header select {
+  border: none;
+  background-color: transparent;
 }
 header nav:not(.fixed) {
   margin-top: 50px;
@@ -313,40 +319,28 @@ main .partners .indent {
   position: relative;
   margin: 50px auto 30px;
 }
-main .partners .indent:last-child > * {
-  width: 50%;
+main .partners .logos .left_of_2 {
+  padding: 0 100px;
+  text-align: center;
 }
-main .partners .indent > .right_of_2 {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(0,-50%);
+main .partners .logos .left_of_2 h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
-main .partners .indent .grid_container {
+main .partners .logos .grid_container {
   width: 80%;
   margin: 0 auto;
 }
-main .partners .indent .grid_element img {
+main .partners .logos .grid_element img {
   width: 8vw;   /* anche se non mi sembra molto elegante */
   height: 50px;
   object-fit: contain;
   vertical-align: middle;
 }
-main .partners .indent .left_of_2:not(.typic) {
-  padding: 0 100px;
-  text-align: center;
+main .partners .girl > * {
+  width: 50%;
 }
-main .partners .indent .left_of_2:not(.typic) h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-main .partners .indent .typic + .right_of_2 {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(0,-50%);
-}
-main .partners .indent .typic + .right_of_2 img {
+main .partners .girl .right_of_2 img {
   height: 250px;
 }
 
@@ -358,28 +352,19 @@ footer .color {
   background-color: rgb(50 73 91);
   color: rgb(203 214 226);
 }
-footer h4 {
-  color: white;
-}
-footer p,
-footer a,
-footer .horizontal_list a {
-  font-weight: 400;
-  color: rgb(203 214 226);
-}
 footer .indent {
   margin: 30px auto;
 }
-footer .grid_element,
-footer .left_of_2,
-footer .right_of_2 {
+footer .links .grid_element,
+footer .end .left_of_2,
+footer .end .right_of_2 {
   text-align: left;
 }
-footer .right_of_2 {
+footer .end .right_of_2 {
   text-align: right;
 }
-footer .left_of_2,
-footer .right_of_2 {
+footer .end .left_of_2,
+footer .end .right_of_2 {
   margin-top: 30px;
 }
 footer ul {
@@ -392,11 +377,18 @@ footer .button.special {
   margin: 10px 0;
   color: rgb(50 73 91);
 }
+footer p,
+footer a,
+footer .horizontal_list a {
+  font-weight: 400;
+  color: rgb(203 214 226);
+}
 footer h4 {
   font-weight: 600;
   line-height: 3.5em;
+  color: white;
 }
-footer .fab {
+footer a:not(:last-child) .fab {
   margin-right: 20px;
 }
 footer .languages {
