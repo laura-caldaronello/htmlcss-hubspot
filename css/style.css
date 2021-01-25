@@ -61,8 +61,7 @@ ul {
   display: inline;
   vertical-align: middle;
 }
-.horizontal_list > * > *,
-.horizontal_list > * > * > *,
+.horizontal_list > * > * ,
 .check,
 p {
   font-size: 12px;
@@ -193,7 +192,7 @@ header .fixed {
 header .fixed .right_of_2 .special {
   color: rgb(0 165 190);
 }
-header nav:nth-child(2) {
+header nav:not(.fixed) {
   margin-top: 50px;
   line-height: 50px;
 }
