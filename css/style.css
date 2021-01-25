@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  color: rgb(50 73 91);
 }
 
 /* inizio classi/selettori che posso usare ovunque */
@@ -73,8 +74,8 @@ ul {
 p {
   font-size: 12px;
   font-weight: bold;
-  color: rgb(70 70 70);
   line-height: 18px;
+  color: rgb(70 70 70);
   vertical-align: middle;
 }
 .horizontal_list > *:not(:last-child) {
@@ -171,8 +172,9 @@ main .achievements .grid_element {
   margin: 0 auto 30px;
 }
 .white_box h4::before {
-  content: 'popolar features';
+  content: 'popular features';
   text-transform: uppercase;
+  font-size: smaller;
 }
 .white_box .button::before {
   content: 'learn more';
@@ -376,7 +378,6 @@ footer ul {
 footer .button.special {
   line-height: 18px;
   margin: 10px 0;
-  color: rgb(50 73 91);
 }
 footer p,
 footer a,
