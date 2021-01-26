@@ -70,6 +70,8 @@ ul {
   vertical-align: middle;
 }
 .horizontal_list > * > * ,
+ul.languages > * > *,
+ul.languages > * > * > *,
 .check,
 p {
   font-size: 12px;

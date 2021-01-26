@@ -34,11 +34,26 @@ select option {
 
 ul.languages {
   display: inline-block;
+  font-style: normal;
+}
+ul.languages > li a::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: " \f078";
 }
 ul.languages .invisible {
   display: none;
+  position: fixed;
+  background-color: rgb(244 249 253);
+}
+ul.languages .invisible li a,
+ul.languages > li a {
+  padding: 0 0.5em 0.5em;
 }
 ul.languages:hover .invisible {
   display: inline-block;
-  position: fixed;
+  border: 1px solid grey;
+  border-top: none;
+}
+ul.languages:hover {
 }
