@@ -19,3 +19,26 @@ header .fixed input {
 header .fixed i {
   visibility: visible;
 }
+
+select {
+  cursor: pointer;
+}
+
+select:hover,
+a:not(.button):not(.search):hover {
+  text-shadow: 1px 1px 1px lightgrey;
+}
+select option {
+  visibility: visible;
+}
+
+ul.languages {
+  display: inline-block;
+}
+ul.languages .invisible {
+  display: none;
+}
+ul.languages:hover .invisible {
+  display: inline-block;
+  position: fixed;
+}
