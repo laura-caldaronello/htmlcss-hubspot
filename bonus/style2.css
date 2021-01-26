@@ -1,0 +1,6 @@
+.button:not(.special):hover {
+  box-shadow: 0px 0px 5px grey;
+}
+.button.special:hover {
+  box-shadow: 0px 0px 5px black;
+}
