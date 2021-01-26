@@ -70,8 +70,8 @@ ul {
   vertical-align: middle;
 }
 .horizontal_list > * > * ,
-ul.languages > * > *,
-ul.languages > * > * > *,
+ul.select > * > *,
+ul.select > * > * > *,
 .check,
 p {
   font-size: 12px;

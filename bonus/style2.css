@@ -28,36 +28,55 @@ a:not(.button):not(.search):hover {
   text-shadow: 1px 1px 1px lightgrey;
 }
 
-ul.languages {
+ul.select {
   display: inline-block;
   font-style: normal;
 }
-ul.languages > li a::after {
+ul.select > li a::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: " \f078";
 }
-ul.languages li {
+ul.select li {
   display: block;
-  min-width: 6em;
   padding: 0 0.5em 0;
-  background-color: rgb(244 249 253);
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
+  text-align: left;
 }
-ul.languages li:only-of-type {
+ul.select li:only-of-type {
   border-top: 1px solid transparent;
 }
-ul.languages .invisible li:last-child {
+ul.select .invisible li:last-child {
   border-bottom: 1px solid;
 }
-ul.languages .invisible {
+ul.select .invisible {
   display: none;
   position: fixed;
 }
-ul.languages:hover li {
+ul.select:hover li {
   border-color: grey;
 }
-ul.languages:hover .invisible {
+ul.select:hover .invisible {
   display: block;
+}
+
+ul.select.language li {
+  min-width: 6em;
+  background-color: rgb(244 249 253);
+}
+ul.select.white li {
+  background-color: white;
+}
+ul.select.software li {
+  min-width: 6.5em;
+}
+ul.select.resources li {
+  min-width: 7em;
+}
+ul.select.partners li {
+  min-width: 6.5em;
+}
+ul.select.about li {
+  min-width: 5em;
 }
