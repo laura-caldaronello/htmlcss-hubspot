@@ -1,6 +1,21 @@
-.button:not(.special):hover {
+.button:not(.special):not(.textbox):hover {
   box-shadow: 0px 0px 5px grey;
 }
-.button.special:hover {
+.button.special:not(.textbox):hover {
   box-shadow: 0px 0px 5px black;
+}
+
+header .fixed .textbox {
+  visibility: hidden;
+  background-color: white;
+  border-color: rgb(0 165 190);
+}
+header .fixed .textbox:hover {
+  visibility: visible;
+}
+header .fixed input {
+  border: none;
+}
+header .fixed i {
+  visibility: visible;
 }

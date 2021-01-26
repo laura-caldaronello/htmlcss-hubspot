@@ -263,11 +263,12 @@ main .hubs .horizontal .right_of_2 > * {
   margin-bottom: 10px;
 }
 main .hubs .horizontal .right_of_2 > .clearfix > .right_of_2 {
-  height: 1em;
-  padding: 0.5em 0;
+  position: relative;
+  height: 18px;
 }
-main .hubs .horizontal .right_of_2 hr {
+main .hubs .horizontal .right_of_2 hr.special {
   border: 1px solid rgb(50 73 91);
+  width: 100%;
 }
 
 /* separazione sezioni */
