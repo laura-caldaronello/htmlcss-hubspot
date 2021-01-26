@@ -72,6 +72,7 @@ ul {
 .horizontal_list > * > * ,
 ul.select > * > *,
 ul.select > * > * > *,
+div.selectbox > * > * > *,
 .check,
 p {
   font-size: 12px;
