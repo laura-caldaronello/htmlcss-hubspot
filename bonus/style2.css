@@ -58,8 +58,11 @@ ul.select:hover .invisible {
   display: block;
 }
 
-nav:not(.fixed) .right_of_2 .select2 > li {
+nav:not(.fixed) {
   position: relative;
+}
+
+nav:not(.fixed) .right_of_2 .select2 > li {
   display: inline-block;
   height: 50px;
 }
@@ -75,11 +78,11 @@ nav:not(.fixed) .right_of_2 li:hover .selectbox {
 .selectbox {
   display: none;
   position: absolute;
-  width: 200%;
+  width: 80vw;
+  left: 0;
+  margin: 0 10vw;
   text-align: left;
   background-color: white;
-  left: 50%;
-  transform: translate(-50%,0);
   padding: 0.5em;
   border: 1px solid grey;
 }
